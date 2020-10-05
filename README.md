@@ -11,7 +11,9 @@ or
 const short = require('@testgrandma/shortcuts');
 ```
 ## Commands
+
 [`rannum`](#rannum) - Generates a random number
+
 [`remove`](#remove) - Removes part of an array
 
 #### rannum
