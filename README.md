@@ -101,7 +101,7 @@ Array is the name of the array, index is the index of the array.
 
 ## 
 
-#### rbgtohex
+#### rgbtohex
 
 ###### Added V.0.0.3
 
@@ -113,7 +113,7 @@ short.rgbtohex(r,g,b);
 
 ##
 
-#### hextorbg
+#### hextorgb
 
 ###### Added V.0.0.3
 Converts Hex to RGB.
