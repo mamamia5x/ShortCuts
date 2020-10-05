@@ -43,6 +43,6 @@ Array is the name of the array, value is the part you want to remove.
 ###### Added V.0.0.2
 Removes part of an array, given the index of it.
 ```js
-short.remove([array], [index]);
+short.indexremove([array], [index]);
 ```
 Array is the name of the array, index is the index of the array.
