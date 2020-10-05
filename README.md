@@ -16,20 +16,33 @@ const short = require('@testgrandma/shortcuts');
 
 [`remove`](#remove) - Removes part of an array
 
+[`indexremove`](#indexremove) - Removes part of an array by it's position.
+
+## 
 #### rannum
 
 ###### Added V.0.0.1
 
 Generates a random number.
 ```js
-short.rannum([min], [max])
+short.rannum([min], [max]);
 ```
 Min is the lowest number and max is the highest. This will generate a number inbetween the values, excluding decimal points.
 
+## 
 #### remove
 ###### Added V.0.0.1
 Removes part of an array, given its value.
 ```js
-short.remove([array], [value])
+short.remove([array], [value]);
 ```
 Array is the name of the array, value is the part you want to remove.
+
+## 
+#### indexremove
+###### Added V.0.0.2
+Removes part of an array, given the index of it.
+```js
+short.remove([array], [index]);
+```
+Array is the name of the array, index is the index of the array.
