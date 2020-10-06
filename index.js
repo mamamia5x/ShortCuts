@@ -10,8 +10,52 @@
 
 */
 
+
+/**
+ * @param {number} min - Minimum number to choose from.
+ * @param {number} max - Maximum number to choose from.
+ * 
+ * @param arr - Name of the array.
+ * @param area - Part of the array to erase.
+ * @param {number} r - Red value in RGB.
+ * @param {number} g - Green value in RGB.
+ * @param {number} b - Blue value in RGB.
+ * @param {string} hex - Hex value.
+ * @param {number} number - The number to convert to decimal.
+ * @param {boolean} sign - Optional, default is false. Returns number if false, returns string with "%" sign after it.
+ */
+
 module.exports.rannum = function (min, max){
   return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+module.exports.topercent = function (number, sign){
+  number = number * 100;
+  number = number.toFixed(2);
+  if (Boolean(sign) == false) return number;
+  else return number + '%';
+  
+}
+
+module.exports.arrayave = function (arr){
+  var i = 0;
+  var average = 0;
+  while (i < arr.length){
+    average += arr[i] / 1;
+    i++;
+  }
+  average = average / arr.length;
+  return average; 
+}
+
+module.exports.arraysum = function (arr){
+  var i = 0;
+  var sum = 0;
+  while (i < arr.length){
+    sum += arr[i] / 1;
+    i++;
+  }
+  return sum;
 }
 
 module.exports.remove = function (arr) {
