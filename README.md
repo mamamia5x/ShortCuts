@@ -137,7 +137,7 @@ short.colorRGB(r,g,b);
 
 Changes the text color for the terminal.
 ```js
-short.colorRGB(hex);
+short.colorhex(hex);
 ```
 
 ## 
