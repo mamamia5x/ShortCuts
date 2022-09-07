@@ -23,6 +23,8 @@ const short = require('@testgrandma/shortcuts');
 
 [`arrayave`](#arrayave) - Returns the average of all elements in an array.
 
+[`reverseStr`](#reverseStr) - Reverses a string.
+
 [`topercent`](#topercent) - Converts a decimal to a percent.
 
 [`rgbtohex`](#rgbtohex) - Converts RGB to Hex.
@@ -32,6 +34,10 @@ const short = require('@testgrandma/shortcuts');
 [`colorRGB`](#colorRGB) - Sets the color for the terminal (RGB).
 
 [`colorhex`](#colorhex) - Sets the color for the terminal (Hex).
+
+[`backRGB`](#backRGB) - Sets the background color for the terminal (RGB).
+
+[`backhex`](#backhex) - Sets the background color for the terminal (Hex).
 
 [`reset`](#reset) - Resets the color back to normal.
 
@@ -90,6 +96,13 @@ short.arrayave([array]);
 
 ##  
  
+#### reverseStr
+###### Added V.0.0.6
+Reverses a string.
+```js
+short.reverseStr([str]);
+```
+
 #### topercent
 ###### Added V.0.0.4
 
@@ -139,8 +152,26 @@ Changes the text color for the terminal.
 ```js
 short.colorhex(hex);
 ```
+##
 
-## 
+#### backRGB
+###### Added V.0.0.6
+
+Changes the background color for the terminal.
+```js
+short.backRGB(r,g,b);
+````
+
+##
+
+#### backhex
+###### Added V.0.0.6
+Changes the background color for the terminal.
+```js
+short.backhex(hex);
+````
+
+##
 
 #### reset
 ###### Added V.0.0.3
