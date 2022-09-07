@@ -10,21 +10,6 @@
 
 */
 
-
-/**
- * @param {number} min - Minimum number to choose from.
- * @param {number} max - Maximum number to choose from.
- * 
- * @param arr - Name of the array.
- * @param area - Part of the array to erase.
- * @param {number} r - Red value in RGB.
- * @param {number} g - Green value in RGB.
- * @param {number} b - Blue value in RGB.
- * @param {string} hex - Hex value.
- * @param {number} number - The number to convert to decimal.
- * @param {boolean} sign - Optional, default is false. Returns number if false, returns string with "%" sign after it.
- */
-
 module.exports.rannum = function (min, max){
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -82,6 +67,14 @@ module.exports.colorhex = function (hex){
   return '\x1b[38;2;' + converttoRGB(hex).r + ';' + converttoRGB(hex).g + ';' + converttoRGB(hex).b + 'm';
 }
 
+module.exports.backRGB = function (r,g,b){
+  return '\x1b[48;2;' + r + ';' + g + ';' + b + 'm';
+}
+
+module.exports.backhex = function (hex){
+  return '\x1b[48;2;' + converttoRGB(hex).r + ';' + converttoRGB(hex).g + ';' + converttoRGB(hex).b + 'm';
+}
+
 module.exports.reset = '\x1b[0m';
 
 module.exports.rgbtohex = function(r, g, b) {
@@ -90,11 +83,18 @@ module.exports.rgbtohex = function(r, g, b) {
 
 module.exports.hextorgb = function(hex) {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? {
+  return result 0.? {
     r: parseInt(result[1], 16),
     g: parseInt(result[2], 16),
     b: parseInt(result[3], 16)
   } : null;
+}
+
+module.exports.reverseStr = function(str){
+  str = str.split("");
+  str.reverse();
+  str = str.join("");
+  return str;
 }
 
 /*
